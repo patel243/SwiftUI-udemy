@@ -32,7 +32,7 @@
                                     <action selector="changeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PxW-U5-TaG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kamelot Picture App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnT-Ix-ND6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="242" verticalHuggingPriority="243" misplaced="YES" text="Kamelot Picture App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnT-Ix-ND6">
                                 <rect key="frame" x="64" y="158" width="286" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="4Ca-Sq-3NV"/>
