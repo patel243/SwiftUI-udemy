@@ -9,11 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+  
+  @IBOutlet weak var imageView: UIImageView!
+  
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view.
+    
+    
+  }
+  
+  @IBAction func changeButton(_ sender: Any) {
+    if imageView.image == UIImage(named: "kamelot")  {
+      imageView.image = UIImage(named: "Online-review-Kamelot")
+    } else {
+      imageView.image = UIImage(named: "kamelot")
     }
+  }
 
 
 }
