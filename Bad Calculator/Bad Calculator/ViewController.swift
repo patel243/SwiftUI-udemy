@@ -13,7 +13,6 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
-    setLabel()
   }
   
   @IBOutlet weak var topInput: UITextField!
@@ -23,20 +22,41 @@ class ViewController: UIViewController {
   @IBOutlet weak var answerText: UILabel!
   
   
-  var labelText = "answer will go here"
-  
-  func setLabel () {
-    let text: String? = topInput.text
-    let bottomText: String? = bottomInput.text
+  @IBAction func add(_ sender: Any) {
+    let topNumber = Int(topInput.text!)
+    let bottomNumber = Int(bottomInput.text!)
     
-    if text != nil && bottomText != nil {
-      answerText.text = "Top Input is \(text) and Bottom Input is \(bottomText)."
-    } else {
-      answerText.text = labelText
-    }
+    let answer = topNumber! + bottomNumber!
+    
+    answerText.text = String(answer)
   }
   
+  @IBAction func subtract(_ sender: Any) {
+    let topNumber = Int(topInput.text!)
+    let bottomNumber = Int(bottomInput.text!)
+    
+    let answer = topNumber! - bottomNumber!
+    
+    answerText.text = String(answer)
+  }
   
+  @IBAction func multiply(_ sender: Any) {
+    let topNumber = Int(topInput.text!)
+    let bottomNumber = Int(bottomInput.text!)
+    
+    let answer = topNumber! * bottomNumber!
+    
+    answerText.text = String(answer)
+  }
+  
+  @IBAction func divide(_ sender: Any) {
+    let topNumber = Int(topInput.text!)
+    let bottomNumber = Int(bottomInput.text!)
+    
+    let answer = topNumber! / bottomNumber!
+    
+    answerText.text = String(answer)
+  }
   
 }
 
