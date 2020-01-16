@@ -16,46 +16,52 @@ class ViewController: UIViewController {
   }
   
   @IBOutlet weak var topInput: UITextField!
-  
   @IBOutlet weak var bottomInput: UITextField!
-  
   @IBOutlet weak var answerText: UILabel!
   
   
   @IBAction func add(_ sender: Any) {
-    let topNumber = Int(topInput.text!)
-    let bottomNumber = Int(bottomInput.text!)
     
-    let answer = topNumber! + bottomNumber!
-    
-    answerText.text = String(answer)
+    if let topNumber = Int(topInput.text!) {
+      if let bottomNumber = Int(bottomInput.text!) {
+        
+        let answer = topNumber + bottomNumber
+        answerText.text = String(answer)
+      }
+    }
   }
   
   @IBAction func subtract(_ sender: Any) {
-    let topNumber = Int(topInput.text!)
-    let bottomNumber = Int(bottomInput.text!)
     
-    let answer = topNumber! - bottomNumber!
-    
-    answerText.text = String(answer)
+    if let topNumber = Int(topInput.text!) {
+      if let bottomNumber = Int(bottomInput.text!) {
+        
+        let answer = topNumber - bottomNumber
+        answerText.text = String(answer)
+      }
+    }
   }
   
   @IBAction func multiply(_ sender: Any) {
-    let topNumber = Int(topInput.text!)
-    let bottomNumber = Int(bottomInput.text!)
     
-    let answer = topNumber! * bottomNumber!
-    
-    answerText.text = String(answer)
+    if let topNumber = Int(topInput.text!) {
+      if let bottomNumber = Int(bottomInput.text!) {
+        
+        let answer = topNumber * bottomNumber
+        answerText.text = String(answer)
+      }
+    }
   }
   
   @IBAction func divide(_ sender: Any) {
-    let topNumber = Int(topInput.text!)
-    let bottomNumber = Int(bottomInput.text!)
     
-    let answer = topNumber! / bottomNumber!
-    
-    answerText.text = String(answer)
+    if let topNumber = Int(topInput.text!) {
+      if let bottomNumber = Int(bottomInput.text!) {
+        
+        let answer = topNumber / bottomNumber
+        answerText.text = String(answer)
+      }
+    }
   }
   
 }
