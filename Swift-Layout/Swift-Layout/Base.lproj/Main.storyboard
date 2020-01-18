@@ -21,7 +21,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kamelot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qlf-cu-eZw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="kamelot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qlf-cu-eZw">
                                 <rect key="frame" x="32" y="122" width="349" height="540"/>
                                 <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
@@ -29,14 +29,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="qlf-cu-eZw" firstAttribute="top" secondItem="gDo-gt-U4i" secondAttribute="bottom" constant="34.5" id="6Ku-aq-NDe"/>
-                            <constraint firstItem="gDo-gt-U4i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="K9p-cz-mh4"/>
-                            <constraint firstItem="qlf-cu-eZw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="LgX-ip-vbl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qlf-cu-eZw" secondAttribute="trailing" constant="33" id="PwI-yS-6AQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qlf-cu-eZw" secondAttribute="trailing" constant="33" id="RK0-SB-Tqf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gDo-gt-U4i" secondAttribute="trailing" constant="10" id="duE-ng-QfG"/>
-                            <constraint firstItem="qlf-cu-eZw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="nmE-cC-cq3"/>
-                            <constraint firstItem="gDo-gt-U4i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="oQH-b5-Rbm"/>
+                            <constraint firstItem="gDo-gt-U4i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Eq0-XR-edf"/>
+                            <constraint firstItem="gDo-gt-U4i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="HbT-ec-aaM"/>
+                            <constraint firstItem="gDo-gt-U4i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T6Q-8c-nLD"/>
+                            <constraint firstItem="qlf-cu-eZw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="ZOG-8t-lyZ"/>
+                            <constraint firstItem="gDo-gt-U4i" firstAttribute="centerX" secondItem="qlf-cu-eZw" secondAttribute="centerX" id="jm5-PS-K9Z"/>
+                            <constraint firstItem="qlf-cu-eZw" firstAttribute="top" secondItem="gDo-gt-U4i" secondAttribute="bottom" constant="34.5" id="lku-eH-OhX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
