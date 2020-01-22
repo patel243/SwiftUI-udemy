@@ -22,7 +22,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="kamelot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qlf-cu-eZw">
-                                <rect key="frame" x="32" y="122" width="349" height="540"/>
+                                <rect key="frame" x="32" y="121" width="349" height="540"/>
                                 <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
