@@ -19,49 +19,24 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
   }
+  
+  func alertSystem (message: String, title: String) -> Void {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+    let okButton = UIAlertAction(title: "Okay", style: UIAlertAction.Style.cancel, handler: nil)
+    alert.addAction(okButton)
+    self.present(alert, animated: true, completion: nil)
+  }
 
   @IBAction func signupClicked(_ sender: Any) {
     
     if usernameText.text == "" {
-      
-      let alert = UIAlertController(title: "Error", message: "Username required", preferredStyle: UIAlertController.Style.alert)
-      let okButton = UIAlertAction(title: "Okay", style: UIAlertAction.Style.cancel) { (UIAlertAction) in
-        // button clicked
-        print("button clicked")
-      }
-      alert.addAction(okButton)
-      self.present(alert, animated: true, completion: nil)
-      
+      alertSystem(message: "Username Required", title: "Error")
     } else if (passwordText.text == "") || (passwordConfirmText.text == "") {
-      
-      let alert = UIAlertController(title: "Error", message: "Please enter both password fields", preferredStyle: UIAlertController.Style.alert)
-      let okButton = UIAlertAction(title: "Okay", style: UIAlertAction.Style.cancel) { (UIAlertAction) in
-        // button clicked
-        print("button clicked")
-      }
-      alert.addAction(okButton)
-      self.present(alert, animated: true, completion: nil)
-      
+      alertSystem(message: "Both Passwords Required", title: "Error")
     } else if (passwordText.text != passwordConfirmText.text) {
-      
-      let alert = UIAlertController(title: "Error", message: "Passwords don't match", preferredStyle: UIAlertController.Style.alert)
-      let okButton = UIAlertAction(title: "Okay", style: UIAlertAction.Style.cancel) { (UIAlertAction) in
-        // button clicked
-        print("button clicked")
-      }
-      alert.addAction(okButton)
-      self.present(alert, animated: true, completion: nil)
-      
+      alertSystem(message: "Passwords Don't Match", title: "Error")
     } else {
-      
-      let alert = UIAlertController(title: "Error", message: "Account Created Successfully!", preferredStyle: UIAlertController.Style.alert)
-      let okButton = UIAlertAction(title: "Okay", style: UIAlertAction.Style.cancel) { (UIAlertAction) in
-        // button clicked
-        print("button clicked")
-      }
-      alert.addAction(okButton)
-      self.present(alert, animated: true, completion: nil)
-      
+      alertSystem(message: "Account Created Successfully", title: "Success")
     }
     
     
