@@ -9,15 +9,18 @@
 import UIKit
 
 class ViewControllerScreenTwo: UIViewController {
+  @IBOutlet weak var labelViewController2: UILabel!
+  @IBOutlet weak var nameLabel: UILabel!
+  
+  var myName = ""
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      nameLabel.text = myName
     }
   
     
-  @IBOutlet weak var labelViewController2: UILabel!
   
-
+  
 }

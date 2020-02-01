@@ -40,6 +40,9 @@
                                 <rect key="frame" x="168" y="264" width="79" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gWe-rH-KB7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -48,6 +51,8 @@
                     <navigationItem key="navigationItem" id="jHG-4b-HtY"/>
                     <connections>
                         <outlet property="labelScreenOne" destination="Mhm-RC-jyj" id="GoT-PA-ep4"/>
+                        <outlet property="nameText" destination="ckw-oe-8ES" id="uJ0-7f-HXw"/>
+                        <segue destination="43A-qD-VxT" kind="show" identifier="toSecondVC" id="RBH-Cd-ysa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -83,6 +88,7 @@
                     <navigationItem key="navigationItem" id="ARE-Kp-2PL"/>
                     <connections>
                         <outlet property="labelViewController2" destination="RGE-8G-CEd" id="Xbd-uT-QX4"/>
+                        <outlet property="nameLabel" destination="VGI-Lp-K5v" id="kYo-tH-8pm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2jJ-FA-xnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -108,4 +114,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RBH-Cd-ysa"/>
+    </inferredMetricsTieBreakers>
 </document>
