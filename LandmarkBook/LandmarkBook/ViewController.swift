@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   // Can do this if we don't want to fill the array until the viewDidLoad
   var landmarkNames = [String]()
   var landmarkImages = [UIImage]()
+  var chosenLandmarkName = ""
+  var chosenLandmarkImage = UIImage()
   @IBOutlet weak var tableView: UITableView!
   
   override func viewDidLoad() {
@@ -34,6 +36,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     landmarkImages.append(UIImage(named: "kremlin.jpg")!)
     landmarkImages.append(UIImage(named: "stonehenge.png")!)
     landmarkImages.append(UIImage(named: "tajMahal.jpg")!)
+    
+    //Adding navigation bar title
+    navigationItem.title = "Landmark List"
     
   }
   
@@ -58,6 +63,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return landmarkNames.count
+  }
+  
+  // This tells if the row is tapped and connects with our segue
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    // getting selected information and passing it to the segue
+    chosenLandmarkName = landmarkNames[indexPath.row]
+    chosenLandmarkImage = landmarkImages[indexPath.row]
+    
+    
+    
+    // toImageVC is the name I gave our segue within main.storyboard
+    performSegue(withIdentifier: "toImageVC", sender: nil)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "toImageVC" {
+      // This lets me access the variables inside ImageViewController file
+      let destinationVC = segue.destination as! ImageViewController
+      destinationVC.landmarkName = chosenLandmarkName
+      destinationVC.landmarkImage = chosenLandmarkImage
+    }
   }
 
 }

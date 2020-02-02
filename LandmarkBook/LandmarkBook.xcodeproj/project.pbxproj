@@ -17,6 +17,7 @@
 		E82715B623E7244C00E9D702 /* kremlin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E82715B223E7244C00E9D702 /* kremlin.jpg */; };
 		E82715B723E7244C00E9D702 /* colusseum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E82715B323E7244C00E9D702 /* colusseum.jpg */; };
 		E82715B823E7244C00E9D702 /* stonehenge.png in Resources */ = {isa = PBXBuildFile; fileRef = E82715B423E7244C00E9D702 /* stonehenge.png */; };
+		E82715BA23E72A2100E9D702 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82715B923E72A2100E9D702 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E82715B223E7244C00E9D702 /* kremlin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kremlin.jpg; sourceTree = "<group>"; };
 		E82715B323E7244C00E9D702 /* colusseum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = colusseum.jpg; sourceTree = "<group>"; };
 		E82715B423E7244C00E9D702 /* stonehenge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stonehenge.png; sourceTree = "<group>"; };
+		E82715B923E72A2100E9D702 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				E82715A623E71EF000E9D702 /* Assets.xcassets */,
 				E82715A823E71EF000E9D702 /* LaunchScreen.storyboard */,
 				E82715AB23E71EF000E9D702 /* Info.plist */,
+				E82715B923E72A2100E9D702 /* ImageViewController.swift */,
 			);
 			path = LandmarkBook;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			files = (
 				E82715A223E71EE700E9D702 /* ViewController.swift in Sources */,
 				E827159E23E71EE700E9D702 /* AppDelegate.swift in Sources */,
+				E82715BA23E72A2100E9D702 /* ImageViewController.swift in Sources */,
 				E82715A023E71EE700E9D702 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
