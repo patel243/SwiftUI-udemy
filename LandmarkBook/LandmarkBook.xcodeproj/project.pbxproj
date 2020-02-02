@@ -13,6 +13,10 @@
 		E82715A523E71EE700E9D702 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82715A323E71EE700E9D702 /* Main.storyboard */; };
 		E82715A723E71EF000E9D702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82715A623E71EF000E9D702 /* Assets.xcassets */; };
 		E82715AA23E71EF000E9D702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82715A823E71EF000E9D702 /* LaunchScreen.storyboard */; };
+		E82715B523E7244C00E9D702 /* tajMahal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E82715B123E7244B00E9D702 /* tajMahal.jpg */; };
+		E82715B623E7244C00E9D702 /* kremlin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E82715B223E7244C00E9D702 /* kremlin.jpg */; };
+		E82715B723E7244C00E9D702 /* colusseum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E82715B323E7244C00E9D702 /* colusseum.jpg */; };
+		E82715B823E7244C00E9D702 /* stonehenge.png in Resources */ = {isa = PBXBuildFile; fileRef = E82715B423E7244C00E9D702 /* stonehenge.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E82715A623E71EF000E9D702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E82715A923E71EF000E9D702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E82715AB23E71EF000E9D702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E82715B123E7244B00E9D702 /* tajMahal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajMahal.jpg; sourceTree = "<group>"; };
+		E82715B223E7244C00E9D702 /* kremlin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kremlin.jpg; sourceTree = "<group>"; };
+		E82715B323E7244C00E9D702 /* colusseum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = colusseum.jpg; sourceTree = "<group>"; };
+		E82715B423E7244C00E9D702 /* stonehenge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stonehenge.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				E827159F23E71EE700E9D702 /* SceneDelegate.swift */,
 				E82715A123E71EE700E9D702 /* ViewController.swift */,
 				E82715A323E71EE700E9D702 /* Main.storyboard */,
+				E82715B323E7244C00E9D702 /* colusseum.jpg */,
+				E82715B223E7244C00E9D702 /* kremlin.jpg */,
+				E82715B423E7244C00E9D702 /* stonehenge.png */,
+				E82715B123E7244B00E9D702 /* tajMahal.jpg */,
 				E82715A623E71EF000E9D702 /* Assets.xcassets */,
 				E82715A823E71EF000E9D702 /* LaunchScreen.storyboard */,
 				E82715AB23E71EF000E9D702 /* Info.plist */,
@@ -125,7 +137,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82715B823E7244C00E9D702 /* stonehenge.png in Resources */,
 				E82715AA23E71EF000E9D702 /* LaunchScreen.storyboard in Resources */,
+				E82715B523E7244C00E9D702 /* tajMahal.jpg in Resources */,
+				E82715B723E7244C00E9D702 /* colusseum.jpg in Resources */,
+				E82715B623E7244C00E9D702 /* kremlin.jpg in Resources */,
 				E82715A723E71EF000E9D702 /* Assets.xcassets in Resources */,
 				E82715A523E71EE700E9D702 /* Main.storyboard in Resources */,
 			);
