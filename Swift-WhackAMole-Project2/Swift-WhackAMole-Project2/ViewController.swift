@@ -35,19 +35,19 @@ class ViewController: UIViewController {
  
   @IBAction func startGame(_ sender: Any) {
     
-    // Resets score
-    currentScore = 0
-    gophersShown = 0
-    score.text = "Score: \(currentScore)"
-    startGophers()
-    
-    // Loads timer
-    timerCounter = 16
-    timerLabel.text = "Timer: \(timerCounter - 1)"
-    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(startTimer), userInfo: nil, repeats: true)
-//    gopherTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(startGophers), userInfo: nil, repeats: true)
-    
-    
+    // Stops user from being able to start a game while a game is already going
+    if timerCounter == 0 {
+      // Resets score
+      currentScore = 0
+      gophersShown = 0
+      score.text = "Score: \(currentScore)"
+      startGophers()
+      
+      // Loads timer
+      timerCounter = 16
+      timerLabel.text = "Timer: \(timerCounter - 1)"
+      timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(startTimer), userInfo: nil, repeats: true)
+    }
   }
   
   func setHighScoreText (number: Int) {
