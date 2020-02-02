@@ -40,4 +40,9 @@ class Musicians {
     print("the \(type), \(name), is now using their \(instrument) to entertain the masses")
   }
   
+  // can only be reached within the Musicians class. Can't be inherited or called from main.swift
+  private func test() {
+    print("test")
+  }
+  
 }
