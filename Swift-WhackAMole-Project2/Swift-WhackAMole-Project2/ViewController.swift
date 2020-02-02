@@ -10,15 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  // Variables
   var timer = Timer()
   var gopherTimer = Timer()
   var timerCounter = 0
   var currentScore: Int = 0
-  var defaultHiScore = 0
   var selectedGopher: Int = 0
   var lastSelectedGopher: Int = 0
   var gophersShown: Int = 0
   var gamesPlayed: Int = 0
+  
+  // UI Items
   @IBOutlet weak var score: UILabel!
   @IBOutlet weak var hiScore: UILabel!
   @IBOutlet weak var timerLabel: UILabel!
@@ -33,6 +35,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var gopher8: UIImageView!
   @IBOutlet weak var gopher9: UIImageView!
  
+  // Starts Game
   @IBAction func startGame(_ sender: Any) {
     
     // Stops user from being able to start a game while a game is already going
@@ -81,11 +84,12 @@ class ViewController: UIViewController {
   // Start gophers showing up one at a time
   func startGophers() {
     
-    gopherTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(gopherStuff), userInfo: nil, repeats: true)
+    gopherTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(gopherStart), userInfo: nil, repeats: true)
     
 
   }
   
+  // Compares previous high score, and if your new score is higher, saves your high score in the local memory
   func checkScore() {
     let currentHiScore = UserDefaults.standard.object(forKey: "hi-score")
     
@@ -104,9 +108,11 @@ class ViewController: UIViewController {
   func swapVisibleGopher(randomNumber: Int) {
     let arrOfGophers = [gopher1, gopher2, gopher3, gopher4, gopher5, gopher6, gopher7, gopher8, gopher9]
     print(randomNumber)
+    // Removes remaining gopher if there are any from previous games.
     if gamesPlayed > 0 && gophersShown == 0 {
       arrOfGophers[lastSelectedGopher]!.isHidden = !arrOfGophers[lastSelectedGopher]!.isHidden
     }
+    // On the first game played, we want to skip this or else it gets stuck visible
     if gophersShown != 0 {
       arrOfGophers[lastSelectedGopher]!.isHidden = !arrOfGophers[lastSelectedGopher]!.isHidden
     }
@@ -117,7 +123,7 @@ class ViewController: UIViewController {
     
   }
   
-  @objc func gopherStuff() {
+  @objc func gopherStart() {
     
     let randomNumber = Int(arc4random_uniform(9))
     swapVisibleGopher(randomNumber: randomNumber)
@@ -144,11 +150,8 @@ class ViewController: UIViewController {
     if timerCounter > 0 {
       currentScore += 1
       score.text = "Score: \(currentScore)"
-      gopherStuff()
+      gopherStart()
     }
   }
-  
-
-
 }
 
