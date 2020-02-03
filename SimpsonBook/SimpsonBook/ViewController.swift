@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
   @IBOutlet weak var tableView: UITableView!
   var simpsons: [Simpson] = []
+  var chosenSimpson: Simpson?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,19 +33,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return simpsons.count - 1
+    return simpsons.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
-    cell.textLabel?.text = "Homer Simpson"
+    cell.textLabel?.text = simpsons[indexPath.row].name
     return cell
   }
   
 
-//  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    <#code#>
-//  }
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    chosenSimpson = simpsons[indexPath.row]
+    self.performSegue(withIdentifier: "toSecondVC", sender: nil)
+    
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "toSecondVC" {
+      let destinationVC = segue.destination as! SecondViewController
+      destinationVC.selectedSimpson = chosenSimpson
+    }
+  }
   
 
 }

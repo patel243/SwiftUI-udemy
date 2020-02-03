@@ -13,13 +13,19 @@ class SecondViewController: UIViewController {
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var simpsonName: UILabel!
   @IBOutlet weak var simpsonJob: UILabel!
+  @IBOutlet weak var simpsonAge: UILabel!
+  
+  var selectedSimpson: Simpson?
   
   
   override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+    simpsonName.text = selectedSimpson?.name
+    simpsonJob.text = selectedSimpson?.occupation
+    simpsonAge.text = String(selectedSimpson!.age)
+    imageView.image = selectedSimpson?.image
+  }
     
 
 }
