@@ -8,25 +8,62 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-
+// picker controller and navigation controller required for the selection of an image and the navigation done with that picker
+class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var nameText: UITextField!
   @IBOutlet weak var dateText: UITextField!
   @IBOutlet weak var ratingText: UITextField!
   
   
-  
   override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+      // imageView gesture recognizer
+    imageView.isUserInteractionEnabled = true
+    let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))
+    imageView.addGestureRecognizer(imageTapRecognizer)
+    
+    
+      // This hides the keyboard when you tap off of a text box
+    let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+    
+      // assigning the above gesture recognizer to the view itself so tapping outside the text boxes hides the keyboard
+    view.addGestureRecognizer(gestureRecognizer)
     }
     
 
   @IBAction func saveButtonClicked(_ sender: Any) {
     print("saveButtonFixed")
     
+  }
+  
+  @objc func selectImage() {
+    
+    let picker = UIImagePickerController()
+    // need to set picker a delegate to this view controller
+    picker.delegate = self
+    // Photo Library connection
+    picker.sourceType = .photoLibrary
+    // This lets the user edit their photo after choosing it
+    picker.allowsEditing = true
+    // need to present the picker like we did with alerts
+    present(picker, animated: true, completion: nil)
+    
+  }
+  
+  // didFinishPickingMediaWithInfo required after picking photo from image library
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    imageView.image = info[.editedImage] as? UIImage // info comes from this function automatically
+    // dismissing picker controller to go back to view controller
+    self.dismiss(animated: true, completion: nil)
+  }
+  
+  // This is what actually hides the keyboard
+  @objc func hideKeyboard() {
+    view.endEditing(true)
   }
   /*
     // MARK: - Navigation
