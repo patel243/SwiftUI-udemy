@@ -54,7 +54,6 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
     
   }
   
-  
   // didFinishPickingMediaWithInfo required after picking photo from image library
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     imageView.image = info[.editedImage] as? UIImage // info comes from this function automatically
