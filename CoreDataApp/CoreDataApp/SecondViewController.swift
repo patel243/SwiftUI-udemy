@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 // picker controller and navigation controller required for the selection of an image and the navigation done with that picker
 class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -36,7 +37,35 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
     
 
   @IBAction func saveButtonClicked(_ sender: Any) {
-    print("saveButtonFixed")
+
+    // SAVING data to Core Data
+    
+    // Talking to the Core Data via App Delegate
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+    
+    let newEntry = NSEntityDescription.insertNewObject(forEntityName: "Entries", into: context)
+    
+    
+    // Attributes
+    newEntry.setValue(nameText.text!, forKey: "name")
+    newEntry.setValue(dateText.text!, forKey: "date")
+    if let rating = Int(ratingText.text!) {
+      newEntry.setValue(rating, forKey: "rating")
+    }
+    newEntry.setValue(UUID(), forKey: "id")
+    // compresses image with this
+    let image = imageView.image?.jpegData(compressionQuality: 0.5)
+    
+    newEntry.setValue(image, forKey: "image")
+    
+    do {
+      try context.save()
+      print("success")
+    } catch {
+      print("error")
+    }
+    
     
   }
   
