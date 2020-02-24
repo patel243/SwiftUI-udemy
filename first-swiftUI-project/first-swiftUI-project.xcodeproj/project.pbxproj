@@ -14,6 +14,7 @@
 		E8574F992403553600861281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8574F982403553600861281 /* Assets.xcassets */; };
 		E8574F9C2403553600861281 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8574F9B2403553600861281 /* Preview Assets.xcassets */; };
 		E8574F9F2403553600861281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8574F9D2403553600861281 /* LaunchScreen.storyboard */; };
+		E8574FA72403598400861281 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8574FA62403598400861281 /* SecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E8574F9B2403553600861281 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E8574F9E2403553600861281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8574FA02403553600861281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8574FA62403598400861281 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E8574FA02403553600861281 /* Info.plist */,
 				E8574F932403552C00861281 /* first_swiftUI_project.xcdatamodeld */,
 				E8574F9A2403553600861281 /* Preview Content */,
+				E8574FA62403598400861281 /* SecondView.swift */,
 			);
 			path = "first-swiftUI-project";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8574F902403552C00861281 /* AppDelegate.swift in Sources */,
+				E8574FA72403598400861281 /* SecondView.swift in Sources */,
 				E8574F952403552C00861281 /* first_swiftUI_project.xcdatamodeld in Sources */,
 				E8574F972403552C00861281 /* ContentView.swift in Sources */,
 				E8574F922403552C00861281 /* SceneDelegate.swift in Sources */,
